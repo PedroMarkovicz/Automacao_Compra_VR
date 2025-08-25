@@ -66,8 +66,6 @@ uv sync
 
 ## ⚙️ Configuração
 
-### 1. Configuração
-
 O sistema utiliza configuração centralizada em `src/config.py`. Os principais parâmetros são:
 
 - **PROCESSING_MONTH**: "05/2025" (mês padrão de processamento)
@@ -75,22 +73,6 @@ O sistema utiliza configuração centralizada em `src/config.py`. Os principais 
 - **COMPANY_PERCENTAGE**: 0.8 (80% empresa)
 - **EMPLOYEE_PERCENTAGE**: 0.2 (20% colaborador)
 - **EXCLUDED_POSITIONS**: Cargos excluídos (diretores, gerentes gerais, etc.)
-
-### 2. Arquivos de Entrada
-
-O sistema processa 11 arquivos Excel localizados em `data/input/`:
-
-- **ATIVOS.xlsx** - Colaboradores ativos
-- **DESLIGADOS.xlsx** - Colaboradores desligados  
-- **ADMISSÃO ABRIL.xlsx** - Novas admissões
-- **AFASTAMENTOS.xlsx** - Colaboradores afastados
-- **FERIAS.xlsx** - Colaboradores em férias
-- **ESTAGIO.xlsx** - Estagiários (excluídos)
-- **APRENDIZ.xlsx** - Aprendizes (excluídos)
-- **EXTERIOR.xlsx** - Colaboradores no exterior
-- **Base sindicato x valor.xlsx** - Valores por sindicato
-- **Base dias uteis.xlsx** - Calendário de dias úteis
-- **VR MENSAL 05.2025.xlsx** - Configurações do mês
 
 ## 🚀 Execução
 
@@ -102,12 +84,6 @@ python run.py
 ### Com Parâmetros
 ```bash
 python run.py --month 05/2025 --validate-only
-```
-
-### Via Docker
-```bash
-docker build -t vr-automation .
-docker run -v $(pwd)/data:/app/data vr-automation
 ```
 
 ## 📊 Estrutura de Dados
@@ -180,25 +156,8 @@ python run.py --debug
 
 ```excel
 # YYYYMMDD_HHMMSS_vr_final_report.xlsx
-| MATRICULA | NOME | CPF | SINDICATO | DIAS_UTEIS | VALOR_DIA | VALOR_TOTAL | EMPRESA_80% | COLABORADOR_20% |
+| MATRICULA | NOME | SINDICATO | DIAS_UTEIS | VALOR_DIA | VALOR_TOTAL | EMPRESA_80% | COLABORADOR_20% |
 |-----------|------|-----|-----------|------------|-----------|-------------|-------------|-----------------|
-| 001234 | João Silva | XXX | SIND_A | 22 | 35.00 | 770.00 | 616.00 | 154.00 |
+| 001234 | João Silva | SIND_A | 22 | 35.00 | 770.00 | 616.00 | 154.00 |
 ```
 
-## 🤝 Contribuição
-
-1. Fork o projeto
-2. Crie feature branch (`git checkout -b feature/NovaFuncionalidade`)
-3. Commit (`git commit -m 'Add: nova funcionalidade'`)
-4. Push (`git push origin feature/NovaFuncionalidade`)
-5. Abra Pull Request
-
-## 📄 Licença
-
-Proprietary - Todos os direitos reservados
-
-## 👥 Equipe
-
-- Desenvolvimento: Time de Automação
-- Contato: automacao@empresa.com
-```
