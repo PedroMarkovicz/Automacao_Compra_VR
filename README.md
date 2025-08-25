@@ -1,4 +1,3 @@
-```markdown
 # 🎯 Automação VR/VA - Sistema Multiagente com LangGraph
 
 ## 📋 Objetivo Geral
