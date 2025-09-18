@@ -4,7 +4,7 @@ Agente de Ingestão de Dados - Data Ingestion Agent
 
 Função Principal:
 - Responsável pela primeira etapa do pipeline de processamento VR
-- Carrega e valida todos os arquivos Excel de entrada (11 arquivos)
+- Carrega e valida todos os arquivos Excel de entrada (10 arquivos)
 - Padroniza os dados em formato DataFrame para processamento posterior
 - Valida a presença de arquivos obrigatórios (ativos, base_sindicato, base_dias_uteis, vr_mensal)
 - Calcula estatísticas iniciais (total de registros, funcionários ativos)
@@ -39,7 +39,6 @@ class DataIngestionAgent:
                 "ativos",
                 "base_sindicato",
                 "base_dias_uteis",
-                "vr_mensal",
             ]
             missing_files = [f for f in required_files if f not in raw_files]
 
