@@ -146,7 +146,7 @@ python run.py --debug
 
 | Problema | Solução |
 |----------|---------|
-| `FileNotFoundError` | Verificar se todos os 11 arquivos estão em `data/input/` |
+| `FileNotFoundError` | Verificar se todos os 10 arquivos estão em `data/input/` |
 | `KeyError: 'MATRICULA'` | Padronizar nomes de colunas nas planilhas |
 | `ValueError: Data inválida` | Verificar formato de datas (DD/MM/YYYY) |
 | Ambiente inválido | Executar `python run.py --validate` para diagnóstico |
