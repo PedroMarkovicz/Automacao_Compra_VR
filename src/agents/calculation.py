@@ -47,9 +47,12 @@ class CalculationAgent:
             # Validar resultados dos cálculos
             self._validate_calculation_results(df, state)
             
+            # Calcular dias úteis do mês
+            workdays = self._calculate_monthly_workdays(state)
+
             # Calcular totais e estatísticas finais
             self._calculate_final_statistics(df, state)
-            
+
             # Atualizar estado
             state["calculated_df"] = df
             state["monthly_workdays"] = workdays
