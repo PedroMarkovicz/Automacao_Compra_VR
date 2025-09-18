@@ -40,7 +40,7 @@ class ExcelHandler:
 
     @staticmethod
     def read_all_input_files(input_dir: Path) -> Dict[str, pd.DataFrame]:
-        """Lê todos os 11 arquivos de entrada"""
+        """Lê todos os 10 arquivos de entrada"""
         files_map = {
             "ativos": "ATIVOS.xlsx",
             "ferias": "FERIAS.xlsx",
@@ -52,7 +52,6 @@ class ExcelHandler:
             "exterior": "EXTERIOR.xlsx",
             "base_sindicato": "Base sindicato x valor.xlsx",
             "base_dias_uteis": "Base dias uteis.xlsx",
-            "vr_mensal": "VR MENSAL 05.2025.xlsx",
         }
 
         data = {}
